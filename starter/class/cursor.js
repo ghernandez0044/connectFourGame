@@ -23,11 +23,22 @@ class Cursor {
   }
 
   left() {
-    // Move cursor left
+    Screen.addCommand('c', 'Move one space to the left!', () => {
+      Screen.setGrid(this.row + 1, this.column, 'O')
+    })
   }
 
   right() {
     // Move cursor right
+    Screen.setGrid(this.row - 1, this.column, 'O')
+  }
+
+  up(){
+
+  }
+
+  down(){
+    
   }
 
 }
